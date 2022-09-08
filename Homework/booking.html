@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/booking.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Страница бронирования</title>
+</head>
+<body>
+
+<div class="center-body">
+    <div class="reg">
+      <div class="choise" id="find" style="top:100px;">
+<form>
+
+
+
+  <br>  Телефон<input id="phone" type="text" required/></br>
+
+   <br> Предполагаемая дата похода<input id="date" type="text" required/> </br>
+
+ <br> Количество участников и их уровень подготовки<input id="level" type="text" required/> </br>
+
+   <br> Вес инвентаря <input id="high" type="text" required/> </br>
+
+  <br>Экстремальный вид отдыха? <input type="radio" name="rad" id="extreme" required/>
+   да <input type="radio" name="rad" id="extreme" required/> нет </br>
+
+ <br> Почтовый адресс <input id="email" type="text" required/> </br>
+
+
+     <input type="submit" style="height: auto" onclick="SendMessage()"/>
+</form>
+ 
+    </div></div>
+
+
+</div>
+
+
+
+      <script type="text/javascript">
+      function SendMessage() {
+         const inputEmail = document.getElementById("email");
+        const inputPhone = document.getElementById("phone");
+        const inputDate = document.getElementById("date");
+        const inputLevel = document.getElementById("level");
+        const inputHigh = document.getElementById("high");
+
+       if (inputHigh.value == ""){
+          inputHigh.style.borderColor = "red";
+        }
+        else {
+          inputHigh.style.borderColor = "black";
+        };
+
+      if (inputPhone.value == ""){
+          inputPhone.style.borderColor = "red";
+        }
+        else {
+          inputPhone.style.borderColor = "black";
+        };
+
+       if (inputEmail.value == ""){
+          inputEmail.style.borderColor = "red";
+        }
+        else {
+          inputEmail.style.borderColor = "black"
+        };
+
+       if (inputDate.value == ""){
+          inputDate.style.borderColor = "red";
+        }
+        else {
+          inputDate.style.borderColor = "black";
+        };
+
+      if (inputLevel.value == ""){
+          inputLevel.style.borderColor = "red";
+        }
+        else {
+          inputLevel.style.borderColor = "black";
+        };
+        }
+      
+    </script>
+</body>
+</html>
